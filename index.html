@@ -2,46 +2,188 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Visor 3D Mejorado</title>
+    <title>Visor 3D</title>
+
     <style>
-        body { margin: 0; overflow: hidden; }
-        canvas { display: block; }
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        canvas {
+            display: block;
+        }
+
+        /* INFOBOXES */
+        .infoBox {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            z-index: 1000;
+            max-width: 420px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.6);
+        }
+
+        .infoBox img,
+        .infoBox video {
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 6px;
+        }
+
+        .infoBox h2 {
+            margin-top: 0;
+        }
     </style>
 </head>
+
 <body>
-    <!-- InfoBox dinámico -->
-    <div id="infoBox" style="
-        display: none;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: rgba(0,0,0,0.9);
-        color: #fff;
-        padding: 20px;
-        border-radius: 10px;
-        text-align: center;
-        z-index: 1000;
-        max-width: 400px;
-    ">
-        <h2 id="infoTitle"></h2>
-        <p id="infoContent"></p>
-        <img id="infoImage" src="" alt="" style="width: 100%; display: none; margin-top: 10px; border-radius: 5px;">
-        <video id="infoVideo" controls style="width: 100%; display: none; margin-top: 10px; border-radius: 5px;">
-            <source src="" type="video/mp4">
+
+    <!-- INFOBOX 1 -->
+    <div class="infoBox" id="infoBox-1">
+        <h2>ISV Venture Star</h2>
+        <p>Nave humana de la pelicula Avatar</p>
+        <img src="images/1.png" alt="">
+    </div>
+
+    <!-- INFOBOX 2 -->
+    <div class="infoBox" id="infoBox-2">
+        <h2>Objeto 2</h2>
+        <p>Información del objeto 2.</p>
+    </div>
+
+    <!-- INFOBOX 3 (con video) -->
+    <div class="infoBox" id="infoBox-3">
+        <h2>Objeto 3</h2>
+        <p>Este objeto incluye un video.</p>
+        <video controls>
+            <source src="videos/3.mp4" type="video/mp4">
             Tu navegador no soporta video.
         </video>
     </div>
 
+    <!-- INFOBOX 4 -->
+    <div class="infoBox" id="infoBox-4">
+        <h2>Objeto 4</h2>
+        <p>Información del objeto 4.</p>
+    </div>
+
+    <!-- INFOBOX 5 -->
+    <div class="infoBox" id="infoBox-5">
+        <h2>Objeto 5</h2>
+        <p>Información del objeto 5.</p>
+    </div>
+
+    <!-- INFOBOX 6 -->
+    <div class="infoBox" id="infoBox-6">
+        <h2>Objeto 6</h2>
+        <p>Información del objeto 6.</p>
+    </div>
+
+    <!-- INFOBOX 7 -->
+    <div class="infoBox" id="infoBox-7">
+        <h2>Objeto 7</h2>
+        <p>Información del objeto 7.</p>
+    </div>
+
+    <!-- INFOBOX 8 -->
+    <div class="infoBox" id="infoBox-8">
+        <h2>Objeto 8</h2>
+        <p>Información del objeto 8.</p>
+    </div>
+
+    <!-- INFOBOX 9 -->
+    <div class="infoBox" id="infoBox-9">
+        <h2>Objeto 9</h2>
+        <p>Información del objeto 9.</p>
+    </div>
+
+    <!-- INFOBOX 10 -->
+    <div class="infoBox" id="infoBox-10">
+        <h2>Objeto 10</h2>
+        <p>Información del objeto 10.</p>
+    </div>
+
+    <!-- INFOBOX 11 -->
+    <div class="infoBox" id="infoBox-11">
+        <h2>Objeto 11</h2>
+        <p>Información del objeto 11.</p>
+    </div>
+
+    <!-- INFOBOX 12 -->
+    <div class="infoBox" id="infoBox-12">
+        <h2>Objeto 12</h2>
+        <p>Información del objeto 12.</p>
+    </div>
+
+    <!-- INFOBOX 13 -->
+    <div class="infoBox" id="infoBox-13">
+        <h2>Objeto 13</h2>
+        <p>Información del objeto 13.</p>
+    </div>
+
+    <!-- INFOBOX 14 -->
+    <div class="infoBox" id="infoBox-14">
+        <h2>Objeto 14</h2>
+        <p>Información del objeto 14.</p>
+    </div>
+
+    <!-- INFOBOX 15 -->
+    <div class="infoBox" id="infoBox-15">
+        <h2>Objeto 15</h2>
+        <p>Información del objeto 15.</p>
+    </div>
+
+    <!-- INFOBOX 16 -->
+    <div class="infoBox" id="infoBox-16">
+        <h2>Objeto 16</h2>
+        <p>Información del objeto 16.</p>
+    </div>
+
+    <!-- INFOBOX 17 -->
+    <div class="infoBox" id="infoBox-17">
+        <h2>Objeto 17</h2>
+        <p>Información del objeto 17.</p>
+    </div>
+
+    <!-- INFOBOX 18 -->
+    <div class="infoBox" id="infoBox-18">
+        <h2>Objeto 18</h2>
+        <p>Información del objeto 18.</p>
+    </div>
+
+    <!-- INFOBOX 19 -->
+    <div class="infoBox" id="infoBox-19">
+        <h2>Objeto 19</h2>
+        <p>Información del objeto 19.</p>
+    </div>
+
+    <!-- INFOBOX 20 -->
+    <div class="infoBox" id="infoBox-20">
+        <h2>Objeto 20</h2>
+        <p>Información del objeto 20.</p>
+    </div>
+
+    <!-- IMPORTMAP THREE -->
     <script type="importmap">
-        {
-            "imports": {
-                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
-                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
-            }
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
         }
+    }
     </script>
 
+    <!-- TU JS -->
     <script src="index.js" type="module"></script>
+
 </body>
 </html>

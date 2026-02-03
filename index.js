@@ -54,11 +54,12 @@ controls.maxPolarAngle = Math.PI / 2;
 // ===============================
 let ring;
 let selectedObject = null;
-const randomRotationSpeed = 0.01;
 let targetFov = DEFAULT_FOV;
-const zoomSpeed = 0.08;
 let focusMode = false;
 let infoTimeout = null;
+
+const randomRotationSpeed = 0.01;
+const zoomSpeed = 0.08;
 
 // ===============================
 // RAYCASTER
@@ -99,52 +100,15 @@ function isSelectable(object) {
 }
 
 // ===============================
-// CONTENIDO DE CADA OBJETO
+// INFOBOX ESTÁTICO
 // ===============================
-const infoData = {};
-for (let i = 1; i <= 20; i++) {
-    infoData[i] = {
-        title: `Objeto ${i}`,
-        content: `Esta es información detallada sobre el objeto ${i}.`,
-        image: `images/${i}.png`,
-        video: null
-    };
-}
-infoData[3].video = 'videos/3.mp4';
-infoData[3].image = null;
+function showStaticInfoBox(id) {
+    document.querySelectorAll('.infoBox').forEach(box => {
+        box.style.display = 'none';
+    });
 
-// ===============================
-// FUNCIÓN PARA MOSTRAR INFOBOX
-// ===============================
-function showInfoBox(objName) {
-    const infoBox = document.getElementById('infoBox');
-    const title = document.getElementById('infoTitle');
-    const content = document.getElementById('infoContent');
-    const image = document.getElementById('infoImage');
-    const video = document.getElementById('infoVideo');
-
-    const data = infoData[objName];
-    if (!data) return;
-
-    title.textContent = data.title || '';
-    content.textContent = data.content || '';
-
-    if (data.image) {
-        image.src = data.image;
-        image.style.display = 'block';
-    } else {
-        image.style.display = 'none';
-    }
-
-    if (data.video) {
-        video.querySelector('source').src = data.video;
-        video.load();
-        video.style.display = 'block';
-    } else {
-        video.style.display = 'none';
-    }
-
-    infoBox.style.display = 'block';
+    const box = document.getElementById(`infoBox-${id}`);
+    if (box) box.style.display = 'block';
 }
 
 // ===============================
@@ -251,15 +215,13 @@ window.addEventListener('click', event => {
 
         if (infoTimeout) clearTimeout(infoTimeout);
         infoTimeout = setTimeout(() => {
-            showInfoBox(obj.name);
+            showStaticInfoBox(obj.name);
         }, 3000);
-
-        return;
     }
 });
 
 // ===============================
-// WHEEL → reset
+// WHEEL → RESET
 // ===============================
 window.addEventListener('wheel', () => {
     if (infoTimeout) {
@@ -278,8 +240,9 @@ window.addEventListener('wheel', () => {
         selectedObject = null;
     }
 
-    const infoBox = document.getElementById('infoBox');
-    if (infoBox) infoBox.style.display = 'none';
+    document.querySelectorAll('.infoBox').forEach(box => {
+        box.style.display = 'none';
+    });
 });
 
 // ===============================
