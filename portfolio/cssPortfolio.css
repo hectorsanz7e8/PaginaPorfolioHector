@@ -1,0 +1,257 @@
+/* ======= RESET GENERAL ======= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+  line-height: 1.6;
+  padding: 0 10%;
+}
+
+/* ======= NAVBAR ======= */
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: #111;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #333;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #f1f1f1;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #02ff63;
+}
+
+img[alt="logo"] {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  border-radius: 50%;
+}
+
+/* ======= SEARCH BAR ======= */
+#search {
+  margin: 1rem auto;
+  display: block;
+  width: 60%;
+  padding: 0.5rem 1rem;
+  border: 1px solid #333;
+  border-radius: 20px;
+  background: #1a1a1a;
+  color: #fff;
+}
+
+/* ======= HEADER ======= */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 0;
+  flex-wrap: wrap;
+}
+
+header div {
+  max-width: 50%;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: #02ff63;
+}
+
+header a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 2rem;
+  background-color: #02ff63;
+  color: #fff;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+header a:hover {
+  background-color: #049e3f;
+}
+
+header img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* ======= SECCIONES GENERALES ======= */
+section {
+  margin: 4rem 0;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #02ff63;
+}
+
+section p {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ======= SKILLS ======= */
+section div article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #1a1a1a;
+  border-radius: 10px;
+  padding: 1rem;
+  transition: transform 0.3s;
+}
+
+section div article:hover {
+  transform: scale(1.05);
+}
+
+section:nth-of-type(2) div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* ======= PORTFOLIO ======= */
+section:nth-of-type(3) {
+  text-align: center;
+}
+
+section:nth-of-type(3) div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  justify-items: center;
+  margin-top: 2rem;
+}
+
+section:nth-of-type(3) img {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+section:nth-of-type(3) img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px #02ff63;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  section:nth-of-type(3) div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  section:nth-of-type(3) div {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ======= EXPERIENCE ======= */
+section:nth-of-type(4) div {
+  background: #1a1a1a;
+  padding: 1rem;
+  border-left: 4px solid #02ff63;
+  margin: 1rem 0;
+}
+
+/* ======= TESTIMONIAL ======= */
+section:nth-of-type(5) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+section:nth-of-type(5) div {
+  max-width: 400px;
+}
+
+/* ======= CONTACT ======= */
+section:nth-of-type(6) div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+  background-color: #02ff63;
+  border-radius: 10px;
+  color: #000000;
+}
+
+section:nth-of-type(6) img {
+  width: 25px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+/* ======= FOOTER ======= */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  border-top: 1px solid #333;
+  margin-top: 3rem;
+  color: #888;
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 768px) {
+  body {
+    padding: 0 5%;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header div {
+    max-width: 100%;
+  }
+
+  #search {
+    width: 90%;
+  }
+
+  section:nth-of-type(2) div {
+    flex-direction: column;
+  }
+}

@@ -152,6 +152,61 @@ loader.load('resources/isv.glb', gltf => {
     scene.add(gltf.scene);
 });
 
+loader.load('resources/h.glb', gltf => {
+    gltf.scene.userData.selectable = false;
+    scene.add(gltf.scene);
+});
+loader.load('resources/can.glb', gltf => {
+    gltf.scene.userData.selectable = false;
+    scene.add(gltf.scene);
+});
+
+loader.load('resources/conejo.glb', gltf => {
+    gltf.scene.userData.selectable = false;
+    scene.add(gltf.scene);
+});
+
+loader.load('resources/cuchillas.glb', gltf => {
+    gltf.scene.userData.selectable = false;
+    scene.add(gltf.scene);
+});
+
+loader.load('resources/cuentas.glb', gltf => {
+    gltf.scene.userData.selectable = false;
+    scene.add(gltf.scene);
+});
+
+loader.load('resources/espadaLaser.glb', gltf => {
+    gltf.scene.userData.selectable = false;
+    scene.add(gltf.scene);
+});
+
+loader.load('resources/flor.glb', gltf => {
+    gltf.scene.userData.selectable = false;
+    scene.add(gltf.scene);
+});
+
+loader.load('resources/gnome.glb', gltf => {
+    gltf.scene.userData.selectable = false;
+    scene.add(gltf.scene);
+});
+
+loader.load('resources/inframundo.glb', gltf => {
+    gltf.scene.userData.selectable = false;
+    scene.add(gltf.scene);
+});
+
+loader.load('resources/jet.glb', gltf => {
+    gltf.scene.userData.selectable = false;
+    scene.add(gltf.scene);
+});
+
+loader.load('resources/khopesh.glb', gltf => {
+    gltf.scene.userData.selectable = false;
+    scene.add(gltf.scene);
+});
+
+
 // ===============================
 // ANIMACIÓN
 // ===============================
