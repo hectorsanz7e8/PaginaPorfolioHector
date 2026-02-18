@@ -206,6 +206,41 @@ loader.load('resources/khopesh.glb', gltf => {
     scene.add(gltf.scene);
 });
 
+loader.load('resources/logo.glb', gltf => {
+    gltf.scene.userData.selectable = false;
+    scene.add(gltf.scene);
+});
+
+loader.load('resources/mewto.glb', gltf => {
+    gltf.scene.userData.selectable = false;
+    scene.add(gltf.scene);
+});
+
+loader.load('resources/barco.glb', gltf => {
+    gltf.scene.userData.selectable = false;
+    scene.add(gltf.scene);
+});
+
+loader.load('resources/perlasElementales.glb', gltf => {
+    gltf.scene.userData.selectable = false;
+    scene.add(gltf.scene);
+});
+
+loader.load('resources/nave.glb', gltf => {
+    gltf.scene.userData.selectable = false;
+    scene.add(gltf.scene);
+});
+
+loader.load('resources/serpiente.glb', gltf => {
+    gltf.scene.userData.selectable = false;
+    scene.add(gltf.scene);
+});
+
+loader.load('resources/rick.glb', gltf => {
+    gltf.scene.userData.selectable = false;
+    scene.add(gltf.scene);
+});
+
 
 // ===============================
 // ANIMACIÓN
