@@ -241,6 +241,11 @@ loader.load('resources/rick.glb', gltf => {
     scene.add(gltf.scene);
 });
 
+loader.load('resources/WRM.glb', gltf => {
+    gltf.scene.userData.selectable = false;
+    scene.add(gltf.scene);
+});
+
 
 // ===============================
 // ANIMACIÓN
