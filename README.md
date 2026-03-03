@@ -1,21 +1,21 @@
 # PaginaPorfolioHector
 Estructura del proyecto:
-/project-root
-│
-├── index.html
-├── index.js
-│
-├── /resources
-│   ├── main.glb
-│   ├── ring.glb
-│   ├── 1.glb → 20.glb
-│   └── otros modelos...
-│
-├── /imagenes
-├── /videos
-│
-└── /portfolio
-    └── portfolio.html
+    /project-root
+    │
+    ├── index.html
+    ├── index.js
+    │
+    ├── /resources
+    │   ├── main.glb
+    │   ├── ring.glb
+    │   ├── 1.glb → 20.glb
+    │   └── otros modelos...
+    │
+    ├── /imagenes
+    ├── /videos
+    │
+    └── /portfolio
+        └── portfolio.html
 
 Funcionamiento de la aplicación
 
